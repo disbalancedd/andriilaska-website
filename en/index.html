@@ -28,10 +28,12 @@ section[id]{scroll-margin-top:80px}
 @media (max-width:640px){.hero{padding-top:40px!important;padding-bottom:64px!important}}
 .wg{display:grid;gap:28px 20px}
 .wg4{grid-template-columns:repeat(4,minmax(0,1fr))}
-.wg3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.wgc{grid-template-columns:repeat(4,minmax(0,1fr))}
 .wg2{grid-template-columns:repeat(2,minmax(0,1fr))}
-@media (max-width:900px){.wg4,.wg3{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:640px){.wg{gap:24px 14px}.wg2{grid-template-columns:minmax(0,1fr)}.wg3{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-left:-24px;margin-right:-24px;padding:0 24px 10px;scroll-padding-left:24px;-webkit-overflow-scrolling:touch}.wg3>figure{flex:0 0 80%;scroll-snap-align:start}.wg .wt{font-size:16px!important}.wg .wk{font-size:13px!important}}
+@media (max-width:900px){.wg4,.wgc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.wg{gap:24px 14px}.wg2{grid-template-columns:minmax(0,1fr)}.wgc{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-left:-24px;margin-right:-24px;padding:0 24px 10px;scroll-padding-left:24px;-webkit-overflow-scrolling:touch}.wgc>figure{flex:0 0 80%;scroll-snap-align:start}.wg .wt{font-size:16px!important}.wg .wk{font-size:13px!important}}
+.hero-tag{display:inline-block;background:#FFFFFF;color:#111214;font:600 13px/1 Inter,sans-serif;padding:8px 12px;border-radius:999px;box-shadow:0 4px 14px rgba(17,18,20,.14);white-space:nowrap}
+@media (max-width:640px){.hero-tag{font-size:12px;padding:7px 10px}}
 .logo-wall{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:40px 80px;width:100%}
 .logo-wall img{height:var(--h);width:auto;max-width:100%;display:block;filter:brightness(0);opacity:.7;transform:translate(0,var(--y,0px))}
 @media (max-width:900px){.logo-wall{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 16px;justify-items:center;max-width:560px;margin:0 auto}.logo-wall img{height:calc(var(--h) * .82);transform:translate(0,calc(var(--y,0px) * .82))}}
@@ -101,10 +103,20 @@ img{max-width:100%}
         <li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E9E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>Design &amp; photos from one source</li>
       </ul>
     </div>
-    <div style="flex: 1 1 380px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
-      <img src="../assets/img/portrait-autumn-01.jpg" alt="Portrait photography: woman in autumn in front of modern architecture" style="grid-row: span 2; width: 100%; height: 480px; object-fit: cover; border-radius: 18px; display: block">
-      <img src="../assets/img/imbissaufsteller.jpg" alt="Menu for a snack bar" style="width: 100%; height: 233px; object-fit: cover; object-position: top; border-radius: 18px; display: block; background: #111214">
-      <img src="../assets/img/wm-lounge.jpg" alt="World Cup Lounge poster for the Airport Hotel" style="width: 100%; height: 233px; object-fit: cover; object-position: top; border-radius: 18px; display: block">
+    <div class="hero-visual" style="flex: 1 1 460px; min-width: 0; max-width: 620px; position: relative; aspect-ratio: 1 / 0.92">
+      <div style="position: absolute; top: 0; right: 0; width: 88%; border-radius: 14px; overflow: hidden; background: #FFFFFF; box-shadow: 0 0 0 1px #E1E0DB, 0 24px 48px rgba(17,18,20,0.12)">
+        <div aria-hidden="true" style="display: flex; gap: 6px; padding: 10px 14px; background: #F1F0EC; border-bottom: 1px solid #E1E0DB"><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span></div>
+        <img src="../assets/img/web-portfolio-alt.jpg" alt="Homepage of the portfolio website andriilaska.com" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block">
+        <span class="hero-tag" style="position: absolute; top: 52px; left: 14px">Website</span>
+      </div>
+      <div style="position: absolute; left: 0; bottom: 0; width: 33%; transform: rotate(-5deg); transform-origin: bottom left">
+        <img src="../assets/img/imbissaufsteller.jpg" alt="Snack bar menu with food and drinks" style="width: 100%; aspect-ratio: 5 / 7; object-fit: cover; object-position: top; border-radius: 10px; display: block; box-shadow: 0 20px 40px rgba(17,18,20,0.28)">
+        <span class="hero-tag" style="position: absolute; top: -14px; left: 12px">Menu</span>
+      </div>
+      <div style="position: absolute; left: 39%; bottom: 3%; width: 33%; transform: rotate(4deg); transform-origin: bottom right">
+        <img src="../assets/img/wm-lounge.jpg" alt="World Cup Lounge poster for the Airport Hotel" style="width: 100%; aspect-ratio: 5 / 7; object-fit: cover; object-position: top; border-radius: 10px; display: block; box-shadow: 0 20px 40px rgba(17,18,20,0.28)">
+        <span class="hero-tag" style="position: absolute; top: -14px; right: 12px">Poster</span>
+      </div>
     </div>
   </section>
 
@@ -283,9 +295,10 @@ img{max-width:100%}
         <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="../assets/img/sommerkino.jpg" alt="Summer cinema poster" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 14px; display: block; background: #E9E8E4"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Summer cinema 2026</span><span class="wk" style="font-size: 14px; color: #55565A">Poster · Event</span></figcaption></figure>
         <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="../assets/img/pronto-moda.jpg" alt="Promotional poster for Pronto Moda" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 14px; display: block; background: #E9E8E4"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Pronto Moda</span><span class="wk" style="font-size: 14px; color: #55565A">Promo poster</span></figcaption></figure>
       </div>
-      <div class="wg wg3" style="margin-top: 36px">
+      <div class="wg wgc" style="margin-top: 36px">
         <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="../assets/img/summerstage-konzept.jpg" alt="Summer Stage campaign: posters, banners, flyers and social media" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: contain; border-radius: 14px; display: block; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E6E5E1"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Summer Stage</span><span class="wk" style="font-size: 14px; color: #55565A">Campaign: poster, banner, flyer, social media</span></figcaption></figure>
         <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="../assets/img/ost-rock-konzept.jpg" alt="Ost-Rock campaign: posters, flyers and screen ads" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: contain; border-radius: 14px; display: block; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E6E5E1"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Ost-Rock</span><span class="wk" style="font-size: 14px; color: #55565A">Campaign: poster, flyer, screen ad</span></figcaption></figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="../assets/img/globana-fashion-sale-konzept.jpg" alt="Globana Fashion Sale campaign: posters, flyers, fence banners and screen ads" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: contain; border-radius: 14px; display: block; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E6E5E1"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Globana Fashion Sale</span><span class="wk" style="font-size: 14px; color: #55565A">Campaign: poster, flyer, fence banner, screen ad</span></figcaption></figure>
         <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="../assets/img/keyvisuals-261-konzept.jpg" alt="Key visual series with floral motifs" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: contain; border-radius: 14px; display: block; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E6E5E1"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Keyvisuals 261</span><span class="wk" style="font-size: 14px; color: #55565A">Key visual series</span></figcaption></figure>
       </div>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 24px; border-top: 1.5px solid #111214; padding-top: 18px; margin: 64px 0 24px">
