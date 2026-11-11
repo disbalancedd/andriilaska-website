@@ -1,0 +1,5 @@
+/* Lokal gehostete Schriften (SIL Open Font License, siehe fonts/OFL-*.txt) — keine Verbindung zu Google */
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/inter-Regular.woff") format("woff")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/inter-Medium.woff") format("woff")}
+@font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/inter-SemiBold.woff") format("woff")}
+@font-face{font-family:"Space Grotesk";font-style:normal;font-weight:300 700;font-display:swap;src:url("fonts/space-grotesk-var.woff") format("woff")}
