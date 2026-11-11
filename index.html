@@ -26,6 +26,12 @@ section[id]{scroll-margin-top:80px}
 .mm-cta{display:flex;align-items:center;justify-content:center;margin-top:20px;min-height:52px;border-radius:999px;font:600 17px Inter,sans-serif;text-decoration:none;color:#111214}
 @media (max-width:1080px){.main-nav,.hdr-cta{display:none!important}.menu-btn{display:inline-flex}.site-header.open .mobile-menu{display:block}}
 @media (max-width:640px){.hero{padding-top:40px!important;padding-bottom:64px!important}}
+.wg{display:grid;gap:28px 20px}
+.wg4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.wg3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.wg2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:900px){.wg4,.wg3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.wg{gap:24px 14px}.wg2{grid-template-columns:minmax(0,1fr)}.wg3{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-left:-24px;margin-right:-24px;padding:0 24px 10px;scroll-padding-left:24px;-webkit-overflow-scrolling:touch}.wg3>figure{flex:0 0 80%;scroll-snap-align:start}.wg .wt{font-size:16px!important}.wg .wk{font-size:13px!important}}
 .logo-wall{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:40px 80px;width:100%}
 .logo-wall img{height:var(--h);width:auto;max-width:100%;display:block;filter:brightness(0);opacity:.7;transform:translate(0,var(--y,0px))}
 @media (max-width:900px){.logo-wall{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 16px;justify-items:center;max-width:560px;margin:0 auto}.logo-wall img{height:calc(var(--h) * .82);transform:translate(0,calc(var(--y,0px) * .82))}}
@@ -259,126 +265,47 @@ img{max-width:100%}
 
   <!-- ARBEITEN -->
   <section id="arbeiten" style="max-width: 1240px; margin: 0 auto; padding: 104px 24px 72px">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 36px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
       <div style="max-width: 640px">
         <span style="font-size: 14px; font-weight: 600; color: #B8350B; letter-spacing: 0.06em; text-transform: uppercase">Arbeiten</span>
         <h2 style="margin: 10px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.03em">Ausgewählte Projekte.</h2>
       </div>
-      <div role="group" aria-label="Arbeiten filtern" style="display: flex; flex-wrap: wrap; gap: 8px">
-                <button type="button" class="chip" data-filter="alle" aria-pressed="true">Alle</button>
-        <button type="button" class="chip" data-filter="print" aria-pressed="false">Print &amp; Werbung</button>
-        <button type="button" class="chip" data-filter="web" aria-pressed="false">Websites</button>
-        <button type="button" class="chip" data-filter="foto" aria-pressed="false">Fotografie</button>
-      </div>
+      <p style="margin: 0; max-width: 420px; color: #3A3B3F; font-size: 17px">Eine Auswahl aus Kundenprojekten und Konzepten — sortiert nach dem, was Sie bei mir buchen können.</p>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px 20px">
-              <a href="#arbeiten" class="work" data-cat="print" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/imbissaufsteller.jpg" alt="Speisekarte für einen Imbiss mit Speisen und Getränken" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 16px; display: block; background: #E9E8E4">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Imbiss-Speisekarte</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Speisekarte</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="print" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/wm-lounge.jpg" alt="Plakat WM Lounge im Airport Hotel" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 16px; display: block; background: #E9E8E4">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">WM Lounge</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Plakat · Event</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="print" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/sommerkino.jpg" alt="Plakat Sommerkino auf dem Freisitz" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 16px; display: block; background: #E9E8E4">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Sommerkino 2026</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Plakat · Event</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="foto" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/portrait-03.jpg" alt="Porträt einer Frau in einem Café" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 16px; display: block; background: #E9E8E4">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Portrait im Café</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Porträt</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="print" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/summerstage-konzept.jpg" alt="Kampagne Summer Stage: Plakate, Banner, Flyer und Social Media" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: contain; border-radius: 16px; display: block; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E6E5E1">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Summer Stage</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Kampagne</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="print" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/pronto-moda.jpg" alt="Werbemittel für Pronto Moda" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 16px; display: block; background: #E9E8E4">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Pronto Moda</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Werbemittel</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="web" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <div class="ph" role="img" aria-label="Platzhalter: Andrii Laska Portfolio" style="aspect-ratio: 4 / 5; border-radius: 16px">Screenshot der Website folgt</div>
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Andrii Laska Portfolio</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Webdesign</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="foto" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/portrait-autumn-01.jpg" alt="Porträt im Herbst vor moderner Architektur" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 16px; display: block; background: #E9E8E4">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Portrait im Herbst</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Porträt</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="print" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/globana-fashion-sale-konzept.jpg" alt="Kampagne Globana Fashion Sale" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: contain; border-radius: 16px; display: block; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E6E5E1">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Globana Fashion Sale</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Kampagne</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="foto" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/auto-01.jpg" alt="Porsche bei Nacht neben einer Straßenbahn" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 16px; display: block; background: #E9E8E4">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Porsche bei Nacht</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Autofoto</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="print" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/ost-rock-konzept.jpg" alt="Kampagne Ost-Rock: Plakate, Flyer und Monitoranzeigen" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: contain; border-radius: 16px; display: block; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E6E5E1">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Ost-Rock</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Kampagne</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="foto" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/editorial-newspaper-01.jpg" alt="Editorial-Porträt eines Mannes mit Zeitung" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 16px; display: block; background: #E9E8E4">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Editorial Portrait</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Editorial</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="print" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/keyvisuals-261-konzept.jpg" alt="Keyvisual-Serie mit Blumenmotiven" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: contain; border-radius: 16px; display: block; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E6E5E1">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Keyvisuals 261</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Keyvisual</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="foto" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/portrait-05.jpg" alt="Porträt einer Frau vor einem schwarzen Auto" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 16px; display: block; background: #E9E8E4">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Portrait mit Auto</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Porträt</span>
-          </div>
-        </a>
-        <a href="#arbeiten" class="work" data-cat="print" style="text-decoration: none; color: #111214; display: flex; flex-direction: column; gap: 14px">
-          <img src="assets/img/norwegen-logo.jpg" alt="Logoentwicklung Norwegen 2026" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: contain; border-radius: 16px; display: block; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E6E5E1">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Norwegen 2026</span>
-            <span style="font-size: 14px; color: #55565A; white-space: nowrap">Logo</span>
-          </div>
-        </a>
-    </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 24px; border-top: 1.5px solid #111214; padding-top: 18px; margin: 64px 0 24px">
+        <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; letter-spacing: -0.02em">Print &amp; Werbung</h3>
+        <span style="font-size: 15px; color: #55565A">Plakate, Speisekarten &amp; Kampagnen</span>
+      </div>
+      <div class="wg wg4">
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/img/imbissaufsteller.jpg" alt="Speisekarte für einen Imbiss mit Speisen und Getränken" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 14px; display: block; background: #E9E8E4"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Imbiss-Speisekarte</span><span class="wk" style="font-size: 14px; color: #55565A">Speisekarte</span></figcaption></figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/img/wm-lounge.jpg" alt="Plakat WM Lounge im Airport Hotel" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 14px; display: block; background: #E9E8E4"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">WM Lounge</span><span class="wk" style="font-size: 14px; color: #55565A">Plakat · Event</span></figcaption></figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/img/sommerkino.jpg" alt="Plakat Sommerkino auf dem Freisitz" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 14px; display: block; background: #E9E8E4"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Sommerkino 2026</span><span class="wk" style="font-size: 14px; color: #55565A">Plakat · Event</span></figcaption></figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/img/pronto-moda.jpg" alt="Werbeplakat für Pronto Moda" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 14px; display: block; background: #E9E8E4"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Pronto Moda</span><span class="wk" style="font-size: 14px; color: #55565A">Werbeplakat</span></figcaption></figure>
+      </div>
+      <div class="wg wg3" style="margin-top: 36px">
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/img/summerstage-konzept.jpg" alt="Kampagne Summer Stage: Plakate, Banner, Flyer und Social Media" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: contain; border-radius: 14px; display: block; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E6E5E1"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Summer Stage</span><span class="wk" style="font-size: 14px; color: #55565A">Kampagne: Plakat, Banner, Flyer, Social Media</span></figcaption></figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/img/ost-rock-konzept.jpg" alt="Kampagne Ost-Rock: Plakate, Flyer und Monitoranzeigen" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: contain; border-radius: 14px; display: block; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E6E5E1"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Ost-Rock</span><span class="wk" style="font-size: 14px; color: #55565A">Kampagne: Plakat, Flyer, Monitoranzeige</span></figcaption></figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/img/keyvisuals-261-konzept.jpg" alt="Keyvisual-Serie mit Blumenmotiven" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: contain; border-radius: 14px; display: block; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E6E5E1"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Keyvisuals 261</span><span class="wk" style="font-size: 14px; color: #55565A">Keyvisual-Serie</span></figcaption></figure>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 24px; border-top: 1.5px solid #111214; padding-top: 18px; margin: 64px 0 24px">
+        <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; letter-spacing: -0.02em">Websites</h3>
+        <span style="font-size: 15px; color: #55565A">Konzept, Design &amp; Umsetzung</span>
+      </div>
+      <div class="wg wg2">
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><div style="border-radius: 14px; overflow: hidden; background: #FFFFFF; box-shadow: 0 0 0 1px #E1E0DB, 0 12px 32px rgba(17,18,20,0.08)"><div aria-hidden="true" style="display: flex; gap: 6px; padding: 10px 14px; background: #F1F0EC; border-bottom: 1px solid #E1E0DB"><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span></div><img src="assets/img/web-portfolio-alt.jpg" alt="Startseite der Portfolio-Website andriilaska.com" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block"></div><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">andriilaska.com</span><span class="wk" style="font-size: 14px; color: #55565A">Portfolio-Website · Design &amp; Umsetzung</span></figcaption></figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><div style="border-radius: 14px; overflow: hidden; background: #FFFFFF; box-shadow: 0 0 0 1px #E1E0DB, 0 12px 32px rgba(17,18,20,0.08)"><div aria-hidden="true" style="display: flex; gap: 6px; padding: 10px 14px; background: #F1F0EC; border-bottom: 1px solid #E1E0DB"><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span></div><img src="assets/img/web-redesign.jpg" alt="Startseite dieser Website" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block"></div><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Diese Website</span><span class="wk" style="font-size: 14px; color: #55565A">Konzept, Design &amp; Umsetzung</span></figcaption></figure>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 24px; border-top: 1.5px solid #111214; padding-top: 18px; margin: 64px 0 24px">
+        <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; letter-spacing: -0.02em">Fotografie</h3>
+        <span style="font-size: 15px; color: #55565A">Porträts, Business &amp; Editorial</span>
+      </div>
+      <div class="wg wg4">
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/img/portrait-03.jpg" alt="Porträt einer Frau in einem Café" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; display: block; background: #E9E8E4"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Portrait im Café</span><span class="wk" style="font-size: 14px; color: #55565A">Porträt</span></figcaption></figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/img/portrait-autumn-01.jpg" alt="Porträt im Herbst vor moderner Architektur" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; display: block; background: #E9E8E4"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Portrait im Herbst</span><span class="wk" style="font-size: 14px; color: #55565A">Porträt</span></figcaption></figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/img/editorial-newspaper-01.jpg" alt="Editorial-Porträt eines Mannes mit Zeitung" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; display: block; background: #E9E8E4"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Editorial Portrait</span><span class="wk" style="font-size: 14px; color: #55565A">Editorial</span></figcaption></figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/img/portrait-05.jpg" alt="Porträt einer Frau vor einem schwarzen Auto" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; display: block; background: #E9E8E4"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Portrait mit Auto</span><span class="wk" style="font-size: 14px; color: #55565A">Porträt</span></figcaption></figure>
+      </div>
   </section>
 
   <!-- CASE STUDY -->
@@ -439,11 +366,11 @@ img{max-width:100%}
       <div style="flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
         <span style="font-size: 14px; font-weight: 600; color: #B8350B; letter-spacing: 0.06em; text-transform: uppercase">Über mich</span>
         <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.03em">Hallo, ich bin Andrii.</h2>
-        <p style="margin: 0; font-size: 18px; color: #3A3B3F">Ich bin Mediengestalter Digital und Print und gestalte Websites, Druckmedien und Fotos für Unternehmen in München und Umgebung. Mir ist wichtig, dass Design nicht nur gut aussieht, sondern Ihnen Kunden bringt.</p>
+        <p style="margin: 0; font-size: 18px; color: #3A3B3F">Ich bin Mediengestalter Digital und Print und gestalte Websites, Druckmedien und Fotos für Unternehmen in München und Umgebung. Durch meine zwei Jahre Ausbildung im Druck weiß ich, worauf es ankommt, damit Speisekarten, Plakate und Flyer auch gedruckt perfekt aussehen. Mir ist wichtig, dass Design nicht nur gut aussieht, sondern Ihnen Kunden bringt.</p>
         <p style="margin: 0; font-size: 18px; color: #3A3B3F">Weil ich Design und Fotografie selbst mache, bekommen Sie alles aus einer Hand — mit einem Look, der auf der Website, der Speisekarte und dem Plakat zusammenpasst.</p>
         <dl style="margin: 6px 0 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: stretch; border-top: 1px solid #D9D8D3">
           <dt style="padding: 16px 24px 14px 0; border-bottom: 1px solid #D9D8D3; font-size: 14px; font-weight: 600; color: #55565A">Schwerpunkte</dt>
-          <dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #D9D8D3; font-size: 16px; font-weight: 500; color: #111214">Design · Web · Fotografie</dd>
+          <dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #D9D8D3; font-size: 16px; font-weight: 500; color: #111214">Design · Druck · Web · Fotografie</dd>
           <dt style="padding: 16px 24px 14px 0; border-bottom: 1px solid #D9D8D3; font-size: 14px; font-weight: 600; color: #55565A">Region</dt>
           <dd style="margin: 0; padding: 14px 0; border-bottom: 1px solid #D9D8D3; font-size: 16px; font-weight: 500; color: #111214">München, Deutschland</dd>
           <dt style="padding: 16px 24px 14px 0; border-bottom: 1px solid #D9D8D3; font-size: 14px; font-weight: 600; color: #55565A">Sprachen</dt>
