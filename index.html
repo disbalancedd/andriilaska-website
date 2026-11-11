@@ -22,6 +22,11 @@ img{max-width:100%}
 .chip{font:600 15px Inter,sans-serif;background:#FFFFFF;color:#111214;border:1.5px solid #CFCEC9;border-radius:999px;padding:10px 18px;min-height:44px;cursor:pointer}
 .chip[aria-pressed="true"]{background:#111214;color:#FFFFFF;border-color:#111214}
 .work[hidden]{display:none!important}
+.to-top{position:fixed;right:20px;bottom:20px;z-index:50;width:52px;height:52px;border-radius:50%;border:0;background:#FF6A3D;color:#111214;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 20px rgba(17,18,20,.3);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .25s,transform .25s,visibility .25s,background .2s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:#FF875F}
+.to-top:focus-visible{outline:3px solid #111214;outline-offset:3px;box-shadow:0 0 0 6px #FFFFFF}
+@media (max-width:600px){.to-top{right:14px;bottom:14px;width:48px;height:48px}}
 </style>
 </head>
 <body>
@@ -90,7 +95,7 @@ img{max-width:100%}
         <span style="font-size: 14px; font-weight: 600; color: #B8350B; letter-spacing: 0.06em; text-transform: uppercase">Leistungen</span>
         <h2 style="margin: 10px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.03em">Alles, was Ihr Geschäft sichtbar macht.</h2>
       </div>
-      <p style="margin: 0; max-width: 420px; color: #3A3B3F; font-size: 17px">Einzeln buchbar oder als Paket. Sie bekommen vorher einen Festpreis, keine Überraschungen.</p>
+      <p style="margin: 0; max-width: 420px; color: #3A3B3F; font-size: 17px">Einzeln buchbar oder als Paket. Sie bekommen vorher einen Festpreis, keine Überraschungen. Zwei Korrekturrunden sind immer inklusive.</p>
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px">
@@ -103,10 +108,11 @@ img{max-width:100%}
           <li>Optimiert für Smartphones</li>
           <li>Kontaktformular &amp; Google Maps</li>
           <li>Fertig in ca. 1–2 Wochen</li>
+          <li>Hosting &amp; Pflege: 29 € / Monat</li>
         </ul>
         <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #DAD9D4; display: flex; justify-content: space-between; align-items: baseline">
           <span style="font-size: 14px; color: #55565A">ab</span>
-          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px">[Preis] €</span>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px">590 €</span>
         </div>
       </article>
 
@@ -119,10 +125,11 @@ img{max-width:100%}
           <li>Kundenstopper &amp; Aufsteller</li>
           <li>Tisch- und Tageskarten</li>
           <li>Druckfertige Dateien</li>
+          <li>Preisänderungen ab 29 €</li>
         </ul>
         <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #DAD9D4; display: flex; justify-content: space-between; align-items: baseline">
           <span style="font-size: 14px; color: #55565A">ab</span>
-          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px">[Preis] €</span>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px">149 €</span>
         </div>
       </article>
 
@@ -138,7 +145,7 @@ img{max-width:100%}
         </ul>
         <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #DAD9D4; display: flex; justify-content: space-between; align-items: baseline">
           <span style="font-size: 14px; color: #55565A">ab</span>
-          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px">[Preis] €</span>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px">99 €</span>
         </div>
       </article>
 
@@ -150,15 +157,18 @@ img{max-width:100%}
           <li>Business- &amp; Teamporträts</li>
           <li>Food- &amp; Produktfotos</li>
           <li>Fotos von Laden &amp; Räumen</li>
-          <li>Bearbeitet &amp; sofort nutzbar</li>
+          <li>Porträt: 1 Std., 10 bearbeitete Fotos</li>
+          <li>Food / Laden: 2 Std., ca. 25 Fotos ab 249 €</li>
         </ul>
         <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #DAD9D4; display: flex; justify-content: space-between; align-items: baseline">
           <span style="font-size: 14px; color: #55565A">ab</span>
-          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px">[Preis] €</span>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px">149 €</span>
         </div>
       </article>
     </div>
   </section>
+
+  <p style="max-width: 1240px; margin: -64px auto 0; padding: 0 24px 96px; font-size: 14px; color: #55565A">Alle Preise sind Startpreise („ab“) — vor Projektbeginn erhalten Sie einen verbindlichen Festpreis. [Hinweis zur Umsatzsteuer, z. B. „Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.“]</p>
 
   <!-- PAKETE -->
   <section id="pakete" style="background: #111214; color: #FFFFFF">
@@ -182,7 +192,7 @@ img{max-width:100%}
             <li style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111214" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M5 12l5 5 9-10"></path></svg>Kundenstopper oder Aktionsplakat</li>
           </ul>
           <div style="margin-top: auto; display: flex; flex-direction: column; gap: 16px">
-            <div style="display: flex; align-items: baseline; gap: 8px"><span style="color: #55565A">ab</span><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 38px; letter-spacing: -0.02em">[Preis] €</span></div>
+            <div style="display: flex; align-items: baseline; gap: 8px"><span style="color: #55565A">ab</span><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 38px; letter-spacing: -0.02em">890 €</span><span style="color: #55565A; font-size: 15px; text-decoration: line-through">einzeln 1.087 €</span></div>
             <a href="#kontakt" style="text-decoration: none; background: #111214; color: #FFFFFF; font-weight: 600; text-align: center; padding: 15px 20px; border-radius: 999px; min-height: 48px; box-sizing: border-box">Gastro-Paket anfragen</a>
           </div>
         </article>
@@ -197,7 +207,7 @@ img{max-width:100%}
             <li style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M5 12l5 5 9-10"></path></svg>Grafiken für Instagram</li>
           </ul>
           <div style="margin-top: auto; display: flex; flex-direction: column; gap: 16px">
-            <div style="display: flex; align-items: baseline; gap: 8px"><span style="color: #C9C9CC">ab</span><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 38px; letter-spacing: -0.02em">[Preis] €</span></div>
+            <div style="display: flex; align-items: baseline; gap: 8px"><span style="color: #C9C9CC">ab</span><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 38px; letter-spacing: -0.02em">890 €</span><span style="color: #C9C9CC; font-size: 15px; text-decoration: line-through">einzeln 1.087 €</span></div>
             <a href="#kontakt" style="text-decoration: none; border: 1.5px solid #FFFFFF; color: #FFFFFF; font-weight: 600; text-align: center; padding: 14px 20px; border-radius: 999px; min-height: 48px; box-sizing: border-box">Laden-Paket anfragen</a>
           </div>
         </article>
@@ -212,7 +222,7 @@ img{max-width:100%}
             <li style="display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M5 12l5 5 9-10"></path></svg>Plakat zur Eröffnung</li>
           </ul>
           <div style="margin-top: auto; display: flex; flex-direction: column; gap: 16px">
-            <div style="display: flex; align-items: baseline; gap: 8px"><span style="color: #C9C9CC">ab</span><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 38px; letter-spacing: -0.02em">[Preis] €</span></div>
+            <div style="display: flex; align-items: baseline; gap: 8px"><span style="color: #C9C9CC">ab</span><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 38px; letter-spacing: -0.02em">790 €</span><span style="color: #C9C9CC; font-size: 15px; text-decoration: line-through">einzeln 1.058 €</span></div>
             <a href="#kontakt" style="text-decoration: none; border: 1.5px solid #FFFFFF; color: #FFFFFF; font-weight: 600; text-align: center; padding: 14px 20px; border-radius: 999px; min-height: 48px; box-sizing: border-box">Start-Paket anfragen</a>
           </div>
         </article>
@@ -421,7 +431,7 @@ img{max-width:100%}
     <div style="display: flex; flex-direction: column; border-top: 1px solid #DAD9D4">
       <details style="border-bottom: 1px solid #DAD9D4; padding: 22px 0">
         <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; min-height: 44px">Was kostet eine Website?<span class="faq-plus" aria-hidden="true" style="font-size: 28px; font-weight: 500; transition: transform .2s">+</span></summary>
-        <p style="margin: 12px 0 0; color: #3A3B3F">Ein Onepager startet ab [Preis] €. Nach dem Erstgespräch bekommen Sie einen Festpreis — der gilt, auch wenn ich länger brauche.</p>
+        <p style="margin: 12px 0 0; color: #3A3B3F">Ein Onepager startet ab 590 €, eine Website mit bis zu 5 Seiten ab 990 €. Nach dem Erstgespräch bekommen Sie einen Festpreis — der gilt, auch wenn ich länger brauche.</p>
       </details>
       <details style="border-bottom: 1px solid #DAD9D4; padding: 22px 0">
         <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; min-height: 44px">Wie schnell ist alles fertig?<span class="faq-plus" aria-hidden="true" style="font-size: 28px; font-weight: 500; transition: transform .2s">+</span></summary>
@@ -429,7 +439,7 @@ img{max-width:100%}
       </details>
       <details style="border-bottom: 1px solid #DAD9D4; padding: 22px 0">
         <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; min-height: 44px">Brauche ich eine Domain und Hosting?<span class="faq-plus" aria-hidden="true" style="font-size: 28px; font-weight: 500; transition: transform .2s">+</span></summary>
-        <p style="margin: 12px 0 0; color: #3A3B3F">Ja, aber darum kümmere ich mich gern. Die Domain läuft auf Ihren Namen, damit sie immer Ihnen gehört.</p>
+        <p style="margin: 12px 0 0; color: #3A3B3F">Ja, aber darum kümmere ich mich gern: Hosting, Updates und kleine Änderungen für 29 € im Monat. Die Domain läuft auf Ihren Namen, damit sie immer Ihnen gehört.</p>
       </details>
       <details style="border-bottom: 1px solid #DAD9D4; padding: 22px 0">
         <summary style="display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; min-height: 44px">Was brauchen Sie von mir?<span class="faq-plus" aria-hidden="true" style="font-size: 28px; font-weight: 500; transition: transform .2s">+</span></summary>
@@ -499,7 +509,7 @@ img{max-width:100%}
   <!-- FOOTER -->
   <footer style="border-top: 1px solid #E6E5E1">
     <div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px; font-size: 14px; color: #55565A">
-      <span><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #111214; font-size: 17px">Andrii Laska.</span> &#160;Websites, Print &amp; Fotografie in [Stadt]</span>
+      <span><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #111214; font-size: 17px">Andrii Laska.</span> &nbsp;Websites, Print &amp; Fotografie in [Stadt]</span>
       <nav aria-label="Rechtliches" style="display: flex; gap: 22px">
         <a href="#kontakt">Kontakt</a>
         <a href="#impressum" id="impressum">Impressum</a>
@@ -510,8 +520,16 @@ img{max-width:100%}
   </footer>
 
 </div>
+<button type="button" class="to-top" aria-label="Nach oben">
+  <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"></path></svg>
+</button>
 <script>
 (function () {
+  var top = document.querySelector('.to-top');
+  function onScroll() { top.classList.toggle('show', window.scrollY > window.innerHeight * 0.8); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
   var chips = document.querySelectorAll('.chip');
   var works = document.querySelectorAll('.work');
   chips.forEach(function (chip) {
