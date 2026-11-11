@@ -36,6 +36,7 @@ section[id]{scroll-margin-top:80px}
 .hero-tag{display:inline-block;background:#FFFFFF;color:#111214;font:600 13px/1 Inter,sans-serif;padding:8px 12px;border-radius:999px;box-shadow:0 4px 14px rgba(17,18,20,.14);white-space:nowrap}
 @media (max-width:640px){.hero-tag{font-size:12px;padding:7px 10px}}
 @media (max-width:640px){.usp{grid-template-columns:minmax(0,1fr)!important}}
+@media (max-width:640px){.br-d{display:none}}
 .logo-wall{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:40px 80px;width:100%}
 .logo-wall img{height:var(--h);width:auto;max-width:100%;display:block;filter:brightness(0);opacity:.7;transform:translate(0,var(--y,0px))}
 @media (max-width:900px){.logo-wall{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 16px;justify-items:center;max-width:560px;margin:0 auto}.logo-wall img{height:calc(var(--h) * .82);transform:translate(0,calc(var(--y,0px) * .82))}}
@@ -101,9 +102,9 @@ img{max-width:100%}
       </div>
       <ul class="usp" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, max-content); gap: 10px 28px; font-size: 15px; font-weight: 500; color: #3A3B3F">
         <li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E9E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>Festpreis vor Projektstart</li>
-        <li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E9E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>Antwort innerhalb von 24 Stunden</li>
-        <li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E9E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>Design &amp; Fotos aus einer Hand</li>
         <li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E9E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>Persönlich vor Ort in München</li>
+        <li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E9E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>Design &amp; Fotos aus einer Hand</li>
+        <li style="display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E9E5A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"></path></svg>Antwort innerhalb von 24 Stunden</li>
       </ul>
     </div>
     <div class="hero-visual" style="flex: 1 1 440px; min-width: 0; max-width: 640px; position: relative; aspect-ratio: 1 / 0.92">
@@ -147,7 +148,7 @@ img{max-width:100%}
         <span style="font-size: 14px; font-weight: 600; color: #B8350B; letter-spacing: 0.06em; text-transform: uppercase">Leistungen</span>
         <h2 style="margin: 10px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.03em">Alles, was Ihr Geschäft sichtbar macht.</h2>
       </div>
-      <p style="margin: 0; max-width: 420px; color: #3A3B3F; font-size: 17px">Einzeln buchbar oder als Paket. Sie bekommen vorher einen Festpreis, keine Überraschungen. Zwei Korrekturrunden sind immer inklusive.</p>
+      <p style="margin: 0; max-width: 420px; color: #3A3B3F; font-size: 17px">Einzeln buchbar oder als Paket. Sie bekommen vorher einen Festpreis, keine Überraschungen. <br class="br-d">Zwei Korrekturrunden sind immer inklusive.</p>
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px">
@@ -230,7 +231,7 @@ img{max-width:100%}
           <span style="font-size: 14px; font-weight: 600; color: #FF6A3D; letter-spacing: 0.06em; text-transform: uppercase">Pakete</span>
           <h2 style="margin: 10px 0 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.03em">Ein Ansprechpartner statt drei Agenturen.</h2>
         </div>
-        <p style="margin: 0; max-width: 420px; color: #C9C9CC; font-size: 17px">Website, Druck und Fotos im selben Look — und günstiger als einzeln gebucht.</p>
+        <p style="margin: 0; max-width: 420px; color: #C9C9CC; font-size: 17px">Website, Druck und Fotos im selben Look — <br class="br-d">und günstiger als einzeln gebucht.</p>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px">
@@ -315,7 +316,7 @@ img{max-width:100%}
       </div>
       <div class="wg wg2">
         <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><div style="border-radius: 14px; overflow: hidden; background: #FFFFFF; box-shadow: 0 0 0 1px #E1E0DB, 0 12px 32px rgba(17,18,20,0.08)"><div aria-hidden="true" style="display: flex; gap: 6px; padding: 10px 14px; background: #F1F0EC; border-bottom: 1px solid #E1E0DB"><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span></div><img src="assets/img/web-portfolio-alt.jpg" alt="Startseite der Portfolio-Website andriilaska.com" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block"></div><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">andriilaska.com</span><span class="wk" style="font-size: 14px; color: #55565A">Portfolio-Website · Design &amp; Umsetzung</span></figcaption></figure>
-        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><div style="border-radius: 14px; overflow: hidden; background: #FFFFFF; box-shadow: 0 0 0 1px #E1E0DB, 0 12px 32px rgba(17,18,20,0.08)"><div aria-hidden="true" style="display: flex; gap: 6px; padding: 10px 14px; background: #F1F0EC; border-bottom: 1px solid #E1E0DB"><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span></div><img src="assets/img/web-redesign-v6.jpg" alt="Startseite dieser Website" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block"></div><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Diese Website</span><span class="wk" style="font-size: 14px; color: #55565A">Konzept, Design &amp; Umsetzung</span></figcaption></figure>
+        <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><div style="border-radius: 14px; overflow: hidden; background: #FFFFFF; box-shadow: 0 0 0 1px #E1E0DB, 0 12px 32px rgba(17,18,20,0.08)"><div aria-hidden="true" style="display: flex; gap: 6px; padding: 10px 14px; background: #F1F0EC; border-bottom: 1px solid #E1E0DB"><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #D3D2CC"></span></div><img src="assets/img/web-redesign-v7.jpg" alt="Startseite dieser Website" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block"></div><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Diese Website</span><span class="wk" style="font-size: 14px; color: #55565A">Konzept, Design &amp; Umsetzung</span></figcaption></figure>
       </div>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 24px; border-top: 1.5px solid #111214; padding-top: 18px; margin: 64px 0 24px">
         <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; letter-spacing: -0.02em">Fotografie</h3>
