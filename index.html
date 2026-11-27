@@ -347,6 +347,7 @@ img{max-width:100%}
         <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/img/editorial-newspaper-01.jpg" alt="Editorial-Porträt eines Mannes mit Zeitung" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; display: block; background: #E9E8E4"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Editorial Portrait</span><span class="wk" style="font-size: 14px; color: #55565A">Editorial</span></figcaption></figure>
         <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/img/portrait-05.jpg" alt="Porträt einer Frau vor einem schwarzen Auto" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; display: block; background: #E9E8E4"><figcaption style="display: flex; flex-direction: column; gap: 2px"><span class="wt" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: #111214">Portrait mit Auto</span><span class="wk" style="font-size: 14px; color: #55565A">Porträt</span></figcaption></figure>
       </div>
+      <div class="gal-more" style="display: flex; justify-content: center; margin-top: 32px"><a href="fotografie/" style="text-decoration: none; border: 1.5px solid #111214; color: #111214; font-weight: 600; font-size: 17px; padding: 14px 26px; border-radius: 999px; min-height: 52px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 10px">Alle Fotos ansehen<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   </section>
 
   <!-- CASE STUDY -->
@@ -596,19 +597,20 @@ html.lb-lock body>*:not(#lb){visibility:hidden}
 </div>
 <script>
 (function(){
-var imgs=[].slice.call(document.querySelectorAll('#arbeiten figure img'));
-var lb=document.getElementById('lb');if(!lb||!imgs.length)return;
+var all=[].slice.call(document.querySelectorAll('#arbeiten figure img')),imgs=all;
+var lb=document.getElementById('lb');if(!lb||!all.length)return;
+function vis(){imgs=all.filter(function(x){return !x.closest('figure').hidden})}
 var big=lb.querySelector('img'),cap=lb.querySelector('.lb-c'),i=0,last=null;
 function show(k){i=(k+imgs.length)%imgs.length;var s=imgs[i];big.src=s.currentSrc||s.src;big.alt=s.alt;
 var f=s.closest('figure'),t=f&&f.querySelector('.wt');cap.innerHTML='';
-var a=document.createElement('b');a.style.fontWeight='600';a.textContent=t?t.textContent:'';cap.appendChild(a);
-var n=document.createElement('span');n.textContent=(i+1)+' / '+imgs.length;cap.appendChild(n);}
+var a=document.createElement('b');a.style.fontWeight='600';if(t){a.textContent=t.textContent;cap.appendChild(a);}
+var n=document.createElement('span');n.textContent=(i+1)+' / '+imgs.length;if(!t)n.style.marginLeft='0';cap.appendChild(n);}
 var tc=document.querySelector('meta[name=theme-color]'),tc0=tc&&tc.getAttribute('content');
 function open(k){last=document.activeElement;if(tc)tc.setAttribute('content','#0A0A0C');show(k);lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.documentElement.classList.add('lb-lock');lb.querySelector('.lb-x').focus({preventScroll:true});}
 function close(){if(tc)tc.setAttribute('content',tc0);lb.classList.remove('open');lb.setAttribute('aria-hidden','true');document.documentElement.classList.remove('lb-lock');if(last&&last.focus)last.focus({preventScroll:true});}
-imgs.forEach(function(im,k){im.setAttribute('tabindex','0');im.setAttribute('role','button');
-im.addEventListener('click',function(){open(k)});
-im.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(k)}});});
+all.forEach(function(im){im.setAttribute('tabindex','0');im.setAttribute('role','button');
+im.addEventListener('click',function(){vis();open(imgs.indexOf(im))});
+im.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();vis();open(imgs.indexOf(im))}});});
 lb.querySelector('.lb-x').addEventListener('click',close);
 lb.querySelector('.lb-p').addEventListener('click',function(e){e.stopPropagation();show(i-1)});
 lb.querySelector('.lb-n').addEventListener('click',function(e){e.stopPropagation();show(i+1)});
