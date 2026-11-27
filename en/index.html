@@ -577,18 +577,20 @@ img{max-width:100%}
 .lb button{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background .15s}
 .lb button:hover{background:rgba(255,255,255,.24)}
 .lb .lb-x{top:calc(16px + env(safe-area-inset-top));right:16px}
-.lb .lb-p{left:20px;top:50%;transform:translateY(-50%)}
-.lb .lb-n{right:20px;top:50%;transform:translateY(-50%)}
+.lb-s{position:relative;display:flex}
+.lb .lb-p{left:-64px;top:50%;transform:translateY(-50%)}
+.lb .lb-n{right:-64px;top:50%;transform:translateY(-50%)}
 .lb .lb-c{position:absolute;left:0;right:0;bottom:calc(18px + env(safe-area-inset-bottom));text-align:center;color:rgba(255,255,255,.85);font-size:15px;padding:0 70px}
 .lb .lb-c span{color:rgba(255,255,255,.5);margin-left:10px}
-@media (max-width:640px){.lb img{max-width:100vw;max-height:calc(100vh - 150px);max-height:calc(100dvh - 150px);border-radius:0}.lb .lb-p,.lb .lb-n{top:auto;bottom:calc(10px + env(safe-area-inset-bottom));transform:none}.lb .lb-p{left:12px}.lb .lb-n{right:12px}.lb .lb-c{bottom:calc(24px + env(safe-area-inset-bottom));font-size:14px}}
+@media (max-width:640px){.lb-s{position:static}.lb img{max-width:100vw;max-height:calc(100vh - 150px);max-height:calc(100dvh - 150px);border-radius:0}.lb .lb-p,.lb .lb-n{top:auto;bottom:calc(10px + env(safe-area-inset-bottom));transform:none}.lb .lb-p{left:12px}.lb .lb-n{right:12px}.lb .lb-c{bottom:calc(24px + env(safe-area-inset-bottom));font-size:14px}}
 html.lb-lock,html.lb-lock body{overflow:hidden}
 </style>
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
-<img alt="">
+<div class="lb-s"><img alt="">
 <button class="lb-x" type="button" aria-label="Close"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
 <button class="lb-p" type="button" aria-label="Previous image"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
 <button class="lb-n" type="button" aria-label="Next image"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
 <div class="lb-c"></div>
 </div>
 <script>
