@@ -79,6 +79,8 @@ img{max-width:100%}
 .gal{columns:3 300px;column-gap:16px}
 .gal figure{display:inline-block;width:100%;margin:0 0 16px;break-inside:avoid;vertical-align:top}
 .gal figure[hidden]{display:none}
+.gal.js{columns:auto;display:flex;gap:16px;align-items:flex-start}.gal.js>.gc{flex:1 1 0;min-width:0}
+@media (max-width:640px){.gal.js{gap:10px}}
 .gal img{width:100%;height:auto;display:block;border-radius:14px;background:#E9E8E4}
 @media (max-width:640px){.gal{columns:2;column-gap:10px}.gal figure{margin-bottom:10px}.gal img{border-radius:10px}.gal-cta{flex-direction:column;align-items:stretch!important;padding:24px!important;gap:20px!important;border-radius:20px!important}.gal-cta>div{flex:none!important}.gal-cta h2{font-size:24px!important}.gal-cta p{font-size:16px!important}.gal-cta a{justify-content:center;white-space:nowrap;padding:15px 20px!important;font-size:16px!important}}
 </style>
@@ -130,27 +132,27 @@ img{max-width:100%}
       <button type="button" data-f="n" aria-pressed="false">Nature & details</button>
     </div>
     <div class="gal">
-      <figure data-c="p"><img src="../../assets/img/foto/portrait-03.jpg" alt="Portrait of a woman in a café" width="1080" height="1350" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../../assets/img/foto/portrait-autumn-01.jpg" alt="Autumn portrait in front of modern architecture" width="1080" height="1350" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../../assets/img/foto/img_1995.jpg" alt="Portrait of a woman in front of a historic facade" width="1200" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../../assets/img/foto/editorial-newspaper-01.jpg" alt="Editorial portrait of a man with a newspaper" width="1280" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../../assets/img/foto/portrait-05.jpg" alt="Portrait of a woman in front of a black car" width="1080" height="1350" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../../assets/img/foto/portrait-04.jpg" alt="Black-and-white street portrait" width="1080" height="1350" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../../assets/img/foto/portrait-02.jpg" alt="Portrait under arcades" width="1080" height="1350" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../../assets/img/foto/portrait-dog-01.jpg" alt="Portrait of a woman with a small dog" width="1080" height="1350" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../../assets/img/foto/portrait-dog-bw-01.jpg" alt="Black-and-white portrait with dog" width="1066" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../../assets/img/foto/auto-01.jpg" alt="Sports car at night in front of a tram" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../../assets/img/foto/street-tram-01.jpg" alt="Street scene at a tram stop at night" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../../assets/img/foto/gebaude-01.jpg" alt="High-rise under dark clouds" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../../assets/img/foto/kirche-01.jpg" alt="Illuminated church at night" width="900" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../../assets/img/foto/kirche-02.jpg" alt="Church spire against the evening sky" width="900" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../../assets/img/foto/winter-01.jpg" alt="Snowy old-town lane with lantern" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../../assets/img/foto/sbahn-01.jpg" alt="Commuter train in the fog" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="n"><img src="../../assets/img/foto/sommer-bergen-01.jpg" alt="Rocks in Saxon Switzerland" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="n"><img src="../../assets/img/foto/sommer-bergen-02.jpg" alt="View over the Elbe valley" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="n"><img src="../../assets/img/foto/sommer-bergen-03.jpg" alt="Cliff above the Elbe" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="n"><img src="../../assets/img/foto/lake-sup-01.jpg" alt="Summer day at the lake with a SUP board" width="1066" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="n"><img src="../../assets/img/foto/studio-brushes-01.jpg" alt="Brushes in the studio" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="0" data-c="p"><img src="../../assets/img/foto/portrait-03.jpg" alt="Portrait of a woman in a café" width="1080" height="1350" loading="lazy" decoding="async"></figure>
+      <figure data-i="1" data-c="s"><img src="../../assets/img/foto/gebaude-01.jpg" alt="High-rise under dark clouds" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="2" data-c="s"><img src="../../assets/img/foto/kirche-01.jpg" alt="Illuminated church at night" width="900" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="3" data-c="p"><img src="../../assets/img/foto/portrait-autumn-01.jpg" alt="Autumn portrait in front of modern architecture" width="1080" height="1350" loading="lazy" decoding="async"></figure>
+      <figure data-i="4" data-c="s"><img src="../../assets/img/foto/auto-01.jpg" alt="Sports car at night in front of a tram" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="5" data-c="p"><img src="../../assets/img/foto/img_1995.jpg" alt="Portrait of a woman in front of a historic facade" width="1200" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="6" data-c="n"><img src="../../assets/img/foto/sommer-bergen-02.jpg" alt="View over the Elbe valley" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="7" data-c="p"><img src="../../assets/img/foto/portrait-04.jpg" alt="Black-and-white street portrait" width="1080" height="1350" loading="lazy" decoding="async"></figure>
+      <figure data-i="8" data-c="s"><img src="../../assets/img/foto/kirche-02.jpg" alt="Church spire against the evening sky" width="900" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="9" data-c="p"><img src="../../assets/img/foto/editorial-newspaper-01.jpg" alt="Editorial portrait of a man with a newspaper" width="1280" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="10" data-c="s"><img src="../../assets/img/foto/street-tram-01.jpg" alt="Street scene at a tram stop at night" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="11" data-c="p"><img src="../../assets/img/foto/portrait-05.jpg" alt="Portrait of a woman in front of a black car" width="1080" height="1350" loading="lazy" decoding="async"></figure>
+      <figure data-i="12" data-c="s"><img src="../../assets/img/foto/winter-01.jpg" alt="Snowy old-town lane with lantern" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="13" data-c="n"><img src="../../assets/img/foto/sommer-bergen-01.jpg" alt="Rocks in Saxon Switzerland" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="14" data-c="p"><img src="../../assets/img/foto/portrait-dog-01.jpg" alt="Portrait of a woman with a small dog" width="1080" height="1350" loading="lazy" decoding="async"></figure>
+      <figure data-i="15" data-c="s"><img src="../../assets/img/foto/sbahn-01.jpg" alt="Commuter train in the fog" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="16" data-c="p"><img src="../../assets/img/foto/portrait-02.jpg" alt="Portrait under arcades" width="1080" height="1350" loading="lazy" decoding="async"></figure>
+      <figure data-i="17" data-c="n"><img src="../../assets/img/foto/lake-sup-01.jpg" alt="Summer day at the lake with a SUP board" width="1066" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="18" data-c="p"><img src="../../assets/img/foto/portrait-dog-bw-01.jpg" alt="Black-and-white portrait with dog" width="1066" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="19" data-c="n"><img src="../../assets/img/foto/sommer-bergen-03.jpg" alt="Cliff above the Elbe" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="20" data-c="n"><img src="../../assets/img/foto/studio-brushes-01.jpg" alt="Brushes in the studio" width="1067" height="1600" loading="lazy" decoding="async"></figure>
     </div>
     <div class="gal-cta" style="margin-top: 56px; background: #F3F2EE; border-radius: 26px; padding: clamp(28px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: center; justify-content: space-between">
       <div style="flex: 1 1 360px; min-width: 0">
@@ -229,10 +231,14 @@ img{max-width:100%}
 })();
 </script>
 <script>
-(function(){var bs=document.querySelectorAll('.gal-f button'),fs=document.querySelectorAll('.gal figure');
+(function(){var bs=document.querySelectorAll('.gal-f button'),fs=[].slice.call(document.querySelectorAll('.gal figure')),g=document.querySelector('.gal'),n0=0;
+function lay(force){var n=window.innerWidth>640?3:2;if(n===n0&&!force)return;n0=n;g.classList.add('js');g.innerHTML='';var cols=[],hs=[];
+for(var k=0;k<n;k++){var c=document.createElement('div');c.className='gc';g.appendChild(c);cols.push(c);hs.push(0)}
+fs.forEach(function(f){if(f.hidden){cols[0].appendChild(f);return}var im=f.querySelector('img'),r=im.getAttribute('height')/im.getAttribute('width'),j=hs.indexOf(Math.min.apply(null,hs));cols[j].appendChild(f);hs[j]+=r+0.03;});}
+lay(true);window.addEventListener('resize',function(){lay(false)});
 bs.forEach(function(b){b.addEventListener('click',function(){var f=b.getAttribute('data-f');
 bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
-fs.forEach(function(g){g.hidden=!(f==='all'||g.getAttribute('data-c')===f)});
+fs.forEach(function(x){x.hidden=!(f==='all'||x.getAttribute('data-c')===f)});lay(true);
 });});})();
 </script>
 
@@ -264,6 +270,7 @@ html.lb-lock body>*:not(#lb){visibility:hidden}
 <script>
 (function(){
 var all=[].slice.call(document.querySelectorAll('#arbeiten figure img')),imgs=all;
+all.sort(function(a,b){var x=a.closest('figure').getAttribute('data-i'),y=b.closest('figure').getAttribute('data-i');return x===null||y===null?0:x-y});
 var lb=document.getElementById('lb');if(!lb||!all.length)return;
 function vis(){imgs=all.filter(function(x){return !x.closest('figure').hidden})}
 var big=lb.querySelector('img'),cap=lb.querySelector('.lb-c'),i=0,last=null;

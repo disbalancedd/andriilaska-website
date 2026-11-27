@@ -598,6 +598,7 @@ html.lb-lock body>*:not(#lb){visibility:hidden}
 <script>
 (function(){
 var all=[].slice.call(document.querySelectorAll('#arbeiten figure img')),imgs=all;
+all.sort(function(a,b){var x=a.closest('figure').getAttribute('data-i'),y=b.closest('figure').getAttribute('data-i');return x===null||y===null?0:x-y});
 var lb=document.getElementById('lb');if(!lb||!all.length)return;
 function vis(){imgs=all.filter(function(x){return !x.closest('figure').hidden})}
 var big=lb.querySelector('img'),cap=lb.querySelector('.lb-c'),i=0,last=null;

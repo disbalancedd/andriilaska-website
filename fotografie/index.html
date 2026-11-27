@@ -79,6 +79,8 @@ img{max-width:100%}
 .gal{columns:3 300px;column-gap:16px}
 .gal figure{display:inline-block;width:100%;margin:0 0 16px;break-inside:avoid;vertical-align:top}
 .gal figure[hidden]{display:none}
+.gal.js{columns:auto;display:flex;gap:16px;align-items:flex-start}.gal.js>.gc{flex:1 1 0;min-width:0}
+@media (max-width:640px){.gal.js{gap:10px}}
 .gal img{width:100%;height:auto;display:block;border-radius:14px;background:#E9E8E4}
 @media (max-width:640px){.gal{columns:2;column-gap:10px}.gal figure{margin-bottom:10px}.gal img{border-radius:10px}.gal-cta{flex-direction:column;align-items:stretch!important;padding:24px!important;gap:20px!important;border-radius:20px!important}.gal-cta>div{flex:none!important}.gal-cta h2{font-size:24px!important}.gal-cta p{font-size:16px!important}.gal-cta a{justify-content:center;white-space:nowrap;padding:15px 20px!important;font-size:16px!important}}
 </style>
@@ -130,27 +132,27 @@ img{max-width:100%}
       <button type="button" data-f="n" aria-pressed="false">Natur & Details</button>
     </div>
     <div class="gal">
-      <figure data-c="p"><img src="../assets/img/foto/portrait-03.jpg" alt="Porträt einer Frau in einem Café" width="1080" height="1350" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../assets/img/foto/portrait-autumn-01.jpg" alt="Porträt im Herbst vor moderner Architektur" width="1080" height="1350" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../assets/img/foto/img_1995.jpg" alt="Porträt einer Frau vor historischer Fassade" width="1200" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../assets/img/foto/editorial-newspaper-01.jpg" alt="Editorial-Porträt eines Mannes mit Zeitung" width="1280" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../assets/img/foto/portrait-05.jpg" alt="Porträt einer Frau vor einem schwarzen Auto" width="1080" height="1350" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../assets/img/foto/portrait-04.jpg" alt="Schwarzweiß-Porträt in einer Straße" width="1080" height="1350" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../assets/img/foto/portrait-02.jpg" alt="Porträt unter Arkaden" width="1080" height="1350" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../assets/img/foto/portrait-dog-01.jpg" alt="Porträt einer Frau mit kleinem Hund" width="1080" height="1350" loading="lazy" decoding="async"></figure>
-      <figure data-c="p"><img src="../assets/img/foto/portrait-dog-bw-01.jpg" alt="Schwarzweiß-Porträt mit Hund" width="1066" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../assets/img/foto/auto-01.jpg" alt="Sportwagen bei Nacht vor einer Straßenbahn" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../assets/img/foto/street-tram-01.jpg" alt="Straßenszene an einer Tramhaltestelle bei Nacht" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../assets/img/foto/gebaude-01.jpg" alt="Hochhaus unter dunklen Wolken" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../assets/img/foto/kirche-01.jpg" alt="Beleuchtete Kirche bei Nacht" width="900" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../assets/img/foto/kirche-02.jpg" alt="Kirchturm vor Abendhimmel" width="900" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../assets/img/foto/winter-01.jpg" alt="Verschneite Altstadtgasse mit Laterne" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="s"><img src="../assets/img/foto/sbahn-01.jpg" alt="S-Bahn im Nebel" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="n"><img src="../assets/img/foto/sommer-bergen-01.jpg" alt="Felsen in der Sächsischen Schweiz" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="n"><img src="../assets/img/foto/sommer-bergen-02.jpg" alt="Blick über das Elbtal" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="n"><img src="../assets/img/foto/sommer-bergen-03.jpg" alt="Felswand über der Elbe" width="1067" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="n"><img src="../assets/img/foto/lake-sup-01.jpg" alt="Sommertag am See mit SUP-Board" width="1066" height="1600" loading="lazy" decoding="async"></figure>
-      <figure data-c="n"><img src="../assets/img/foto/studio-brushes-01.jpg" alt="Pinsel im Atelier" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="0" data-c="p"><img src="../assets/img/foto/portrait-03.jpg" alt="Porträt einer Frau in einem Café" width="1080" height="1350" loading="lazy" decoding="async"></figure>
+      <figure data-i="1" data-c="s"><img src="../assets/img/foto/gebaude-01.jpg" alt="Hochhaus unter dunklen Wolken" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="2" data-c="s"><img src="../assets/img/foto/kirche-01.jpg" alt="Beleuchtete Kirche bei Nacht" width="900" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="3" data-c="p"><img src="../assets/img/foto/portrait-autumn-01.jpg" alt="Porträt im Herbst vor moderner Architektur" width="1080" height="1350" loading="lazy" decoding="async"></figure>
+      <figure data-i="4" data-c="s"><img src="../assets/img/foto/auto-01.jpg" alt="Sportwagen bei Nacht vor einer Straßenbahn" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="5" data-c="p"><img src="../assets/img/foto/img_1995.jpg" alt="Porträt einer Frau vor historischer Fassade" width="1200" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="6" data-c="n"><img src="../assets/img/foto/sommer-bergen-02.jpg" alt="Blick über das Elbtal" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="7" data-c="p"><img src="../assets/img/foto/portrait-04.jpg" alt="Schwarzweiß-Porträt in einer Straße" width="1080" height="1350" loading="lazy" decoding="async"></figure>
+      <figure data-i="8" data-c="s"><img src="../assets/img/foto/kirche-02.jpg" alt="Kirchturm vor Abendhimmel" width="900" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="9" data-c="p"><img src="../assets/img/foto/editorial-newspaper-01.jpg" alt="Editorial-Porträt eines Mannes mit Zeitung" width="1280" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="10" data-c="s"><img src="../assets/img/foto/street-tram-01.jpg" alt="Straßenszene an einer Tramhaltestelle bei Nacht" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="11" data-c="p"><img src="../assets/img/foto/portrait-05.jpg" alt="Porträt einer Frau vor einem schwarzen Auto" width="1080" height="1350" loading="lazy" decoding="async"></figure>
+      <figure data-i="12" data-c="s"><img src="../assets/img/foto/winter-01.jpg" alt="Verschneite Altstadtgasse mit Laterne" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="13" data-c="n"><img src="../assets/img/foto/sommer-bergen-01.jpg" alt="Felsen in der Sächsischen Schweiz" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="14" data-c="p"><img src="../assets/img/foto/portrait-dog-01.jpg" alt="Porträt einer Frau mit kleinem Hund" width="1080" height="1350" loading="lazy" decoding="async"></figure>
+      <figure data-i="15" data-c="s"><img src="../assets/img/foto/sbahn-01.jpg" alt="S-Bahn im Nebel" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="16" data-c="p"><img src="../assets/img/foto/portrait-02.jpg" alt="Porträt unter Arkaden" width="1080" height="1350" loading="lazy" decoding="async"></figure>
+      <figure data-i="17" data-c="n"><img src="../assets/img/foto/lake-sup-01.jpg" alt="Sommertag am See mit SUP-Board" width="1066" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="18" data-c="p"><img src="../assets/img/foto/portrait-dog-bw-01.jpg" alt="Schwarzweiß-Porträt mit Hund" width="1066" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="19" data-c="n"><img src="../assets/img/foto/sommer-bergen-03.jpg" alt="Felswand über der Elbe" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure data-i="20" data-c="n"><img src="../assets/img/foto/studio-brushes-01.jpg" alt="Pinsel im Atelier" width="1067" height="1600" loading="lazy" decoding="async"></figure>
     </div>
     <div class="gal-cta" style="margin-top: 56px; background: #F3F2EE; border-radius: 26px; padding: clamp(28px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: center; justify-content: space-between">
       <div style="flex: 1 1 360px; min-width: 0">
@@ -229,10 +231,14 @@ img{max-width:100%}
 })();
 </script>
 <script>
-(function(){var bs=document.querySelectorAll('.gal-f button'),fs=document.querySelectorAll('.gal figure');
+(function(){var bs=document.querySelectorAll('.gal-f button'),fs=[].slice.call(document.querySelectorAll('.gal figure')),g=document.querySelector('.gal'),n0=0;
+function lay(force){var n=window.innerWidth>640?3:2;if(n===n0&&!force)return;n0=n;g.classList.add('js');g.innerHTML='';var cols=[],hs=[];
+for(var k=0;k<n;k++){var c=document.createElement('div');c.className='gc';g.appendChild(c);cols.push(c);hs.push(0)}
+fs.forEach(function(f){if(f.hidden){cols[0].appendChild(f);return}var im=f.querySelector('img'),r=im.getAttribute('height')/im.getAttribute('width'),j=hs.indexOf(Math.min.apply(null,hs));cols[j].appendChild(f);hs[j]+=r+0.03;});}
+lay(true);window.addEventListener('resize',function(){lay(false)});
 bs.forEach(function(b){b.addEventListener('click',function(){var f=b.getAttribute('data-f');
 bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
-fs.forEach(function(g){g.hidden=!(f==='all'||g.getAttribute('data-c')===f)});
+fs.forEach(function(x){x.hidden=!(f==='all'||x.getAttribute('data-c')===f)});lay(true);
 });});})();
 </script>
 
@@ -264,6 +270,7 @@ html.lb-lock body>*:not(#lb){visibility:hidden}
 <script>
 (function(){
 var all=[].slice.call(document.querySelectorAll('#arbeiten figure img')),imgs=all;
+all.sort(function(a,b){var x=a.closest('figure').getAttribute('data-i'),y=b.closest('figure').getAttribute('data-i');return x===null||y===null?0:x-y});
 var lb=document.getElementById('lb');if(!lb||!all.length)return;
 function vis(){imgs=all.filter(function(x){return !x.closest('figure').hidden})}
 var big=lb.querySelector('img'),cap=lb.querySelector('.lb-c'),i=0,last=null;
